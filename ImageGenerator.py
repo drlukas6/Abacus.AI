@@ -71,9 +71,9 @@ class ImageGenerator:
             random_scaling_index_x = np.random.rand() + 0.7
             random_scaling_index_y = np.random.rand() + 0.7
             smaller_image = cv2.resize(smaller_image,
-                                      None,
-                                      fx=random_scaling_index_x,
-                                      fy=random_scaling_index_y)
+                                       None,
+                                       fx=random_scaling_index_x,
+                                       fy=random_scaling_index_y)
             s_height, s_width, s_channels = smaller_image.shape
             s_height_3, s_width_3 = math.floor(s_height / 3), math.floor(s_width / 3)
 
@@ -82,8 +82,12 @@ class ImageGenerator:
                                               [0, s_width]])
 
             affine_ref_points_2 = np.float32([[self.random_float(0, s_height_3), self.random_float(0, s_width_3)],
-                                              [self.random_float(s_height - s_height_3, s_height), self.random_float(0, s_width_3)],
-                                              [self.random_float(0, s_height_3), self.random_float(s_width - s_width_3, s_width)]])
+                                              [self.random_float(s_height - s_height_3, s_height),
+                                               self.random_float(0, s_width_3)],
+                                              [self.random_float(0, s_height_3),
+                                               self.random_float(s_width - s_width_3, s_width)]])
+
+            # affine_ref_points_1, affine_ref_points_2 = self.get_random_affine_transform_points(s_width, s_height)
 
             M = cv2.getAffineTransform(affine_ref_points_1, affine_ref_points_2)
 
@@ -98,7 +102,8 @@ class ImageGenerator:
             y_max = y_offset + s_height
             for c in range(0, 3):
                 background_copy[y_offset:y_max, x_offset:x_max, c] = (s_alpha * smaller_image[:, :, c] +
-                                                                      l_alpha * background_copy[y_offset:y_max, x_offset:x_max, c])
+                                                                      l_alpha * background_copy[y_offset:y_max,
+                                                                                x_offset:x_max, c])
         plt.imshow(background_copy)
         plt.show()
 
