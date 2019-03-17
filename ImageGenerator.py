@@ -8,8 +8,14 @@ class ImageGenerator:
     def __init__(self, backgrounds_folder, fonts_folder, symbols_folder):
         self.current_directory = os.getcwd()
         self.backgrounds_folder = os.path.join(self.current_directory, backgrounds_folder)
+        if not os.path.exists(backgrounds_folder):
+            os.mkdir(backgrounds_folder)
         self.fonts_folder = os.path.join(self.current_directory, fonts_folder)
+        if not os.path.exists(fonts_folder):
+            os.mkdir(fonts_folder)
         self.symbols_folder = os.path.join(self.current_directory, symbols_folder)
+        if not os.path.exists(symbols_folder):
+            os.mkdir(symbols_folder)
         self.available_fonts = os.listdir(self.fonts_folder)
         self.symbols = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '-', '*', '/'}
 
@@ -67,9 +73,5 @@ class ImageGenerator:
         for c in range(0, 3):
             background_copy[y_offset:y_max, x_offset:x_max, c] = (s_alpha * smaller_image[:, :, c] +
                                                                   l_alpha * background_copy[y_offset:y_max, x_offset:x_max, c])
-        # background_copy[y_offset:(y_offset+s_height), x_offset:(x_offset + s_width)] = smaller_image
         plt.imshow(background_copy)
         plt.show()
-        # cv2.imshow('resulting image', background_copy)
-        # cv2.waitKey(0)
-
