@@ -7,11 +7,10 @@ image_generator = ImageGenerator(backgrounds_folder='Backgrounds',
 
 image_generator.print_directory_status()
 
-# image_generator.generate_text_image(os.path.join(image_generator.fonts_folder, 'FilamentFive.otf'), 40, 'LUKAS')
+# image_generator.generate_examples_for_all_symbols(len(os.listdir(image_generator.fonts_folder)))
 
-image_generator.generate_examples_for_all_symbols(15)
+s_locations = [os.path.join(image_generator.current_directory, 't.png')]
 
-# image_generator.combine_images(smaller_image_location=os.path.join(image_generator.current_directory,
-#                                                                    't.png'),
-#                                background_image_location=os.path.join(image_generator.backgrounds_folder,
-#                                                                       'background_1.jpg'))
+image_generator.combine_images(smaller_images_locations=s_locations,
+                               background_image_location=os.path.join(image_generator.backgrounds_folder,
+                                                                      'iu.png'))
