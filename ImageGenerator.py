@@ -5,7 +5,6 @@ import cv2
 import matplotlib.pyplot as plt
 import math
 
-
 class ImageGenerator:
     def __init__(self, backgrounds_folder, fonts_folder, symbols_folder):
         self.current_directory = os.getcwd()
@@ -60,22 +59,25 @@ class ImageGenerator:
             self.generate_examples_for_text(symbol, number_of_examples)
 
     def combine_images(self, smaller_images_locations, background_image_location):
+        print('Smaller images: {0} ; Background: {1}'.format(smaller_images_locations, background_image_location))
+
         background_image = cv2.imread(background_image_location)
         b_height, b_width, b_channels = background_image.shape
 
         background_copy = background_image.copy()
 
         for s_location in smaller_images_locations:
-            smaller_image = cv2.imread(s_location, -1)
-            # Adding 0.7 so the image never gets smaller that .7 of its size
-            random_scaling_index_x = np.random.rand() + 0.7
-            random_scaling_index_y = np.random.rand() + 0.7
+            smaller_image_location = os.path.join(self.symbols_folder, s_location)
+            smaller_image = cv2.imread(smaller_image_location, -1)
+            # Adding 0.7 so the image never gets smaller that 2 of its size
+            random_scaling_index_x = np.random.rand() + 2
+            random_scaling_index_y = np.random.rand() + 2
             smaller_image = cv2.resize(smaller_image,
                                        None,
                                        fx=random_scaling_index_x,
                                        fy=random_scaling_index_y)
             s_height, s_width, s_channels = smaller_image.shape
-            s_height_3, s_width_3 = math.floor(s_height / 3), math.floor(s_width / 3)
+            s_height_3, s_width_3 = math.floor(s_height / 5), math.floor(s_width / 5)
 
             affine_ref_points_1 = np.float32([[0, 0],
                                               [s_height, 0],
@@ -86,8 +88,6 @@ class ImageGenerator:
                                                self.random_float(0, s_width_3)],
                                               [self.random_float(0, s_height_3),
                                                self.random_float(s_width - s_width_3, s_width)]])
-
-            # affine_ref_points_1, affine_ref_points_2 = self.get_random_affine_transform_points(s_width, s_height)
 
             M = cv2.getAffineTransform(affine_ref_points_1, affine_ref_points_2)
 
@@ -106,6 +106,32 @@ class ImageGenerator:
                                                                                 x_offset:x_max, c])
         plt.imshow(background_copy)
         plt.show()
+        # TODO: RETURN IMAGE LOCATION TO USE *.CSV WITH
+
+    def start_generating_images(self, multi_threaded, images_per_background, number_of_images, difficulty):
+        if multi_threaded:
+            self.do_something()
+
+        for i in range(number_of_images):
+            random_images = []
+            while len(random_images) < images_per_background:
+                random_letter = os.listdir(self.symbols_folder)[np.random.randint(0, len(os.listdir(self.symbols_folder)))]
+                if random_letter == '.DS_Store':
+                    continue
+                random_letter_folder = os.path.join(self.symbols_folder, random_letter, difficulty)
+                found_images = os.listdir(random_letter_folder)
+                random_image_name = found_images[np.random.randint(0, len(found_images))]
+                random_image_path = os.path.join(random_letter, difficulty, random_image_name)
+                random_images.append(random_image_path)
+            random_background_location = ''
+            while True:
+                random_background_location = os.path.join(self.backgrounds_folder,
+                                                        os.listdir(self.backgrounds_folder)[np.random.randint(0, len(os.listdir(self.backgrounds_folder)))])
+                if '.DS_Store' not in random_background_location:
+                    break
+            self.combine_images(random_images, random_background_location)
+
+
 
     def random_float(self, min_num, max_num):
         return np.random.random() * (max_num - min_num) + min_num
