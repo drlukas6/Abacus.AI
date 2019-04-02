@@ -4,6 +4,9 @@ import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 import math
+import random
+import string
+import csv
 
 class ImageGenerator:
     def __init__(self, backgrounds_folder, fonts_folder, symbols_folder):
@@ -19,6 +22,13 @@ class ImageGenerator:
             os.mkdir(symbols_folder)
         self.available_fonts = os.listdir(self.fonts_folder)
         self.symbols = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '-', '*', ':'}
+        self.generated_images_folder = os.path.join(self.current_directory, 'Images')
+        self.images_folder = os.path.join(self.current_directory, 'Images')
+        if not os.path.exists(self.images_folder):
+            os.mkdir(self.images_folder)
+        self.data_folder = os.path.join(self.current_directory, 'Data')
+        if not os.path.exists(self.data_folder):
+            os.mkdir(self.data_folder)
 
     def print_directory_status(self):
         print('Current directory: {}'.format(self.current_directory))
@@ -27,10 +37,7 @@ class ImageGenerator:
         print('Symbols directory: {}'.format(self.symbols_folder))
 
     def generate_text_image(self, font, size, text):
-        try:
-            loaded_font = ImageFont.truetype(font, size)
-        except:
-            print('FONT: ', font)
+        loaded_font = ImageFont.truetype(font, size)
         size = loaded_font.getsize(text)
         background_image = Image.new('RGBA', size, (255, 255, 255, 0))
         image_to_draw_on = ImageDraw.Draw(background_image)
@@ -65,19 +72,19 @@ class ImageGenerator:
         b_height, b_width, b_channels = background_image.shape
 
         background_copy = background_image.copy()
-
+        image_class = ''
         for s_location in smaller_images_locations:
             smaller_image_location = os.path.join(self.symbols_folder, s_location)
             smaller_image = cv2.imread(smaller_image_location, -1)
-            # Adding 0.7 so the image never gets smaller that 2 of its size
-            random_scaling_index_x = np.random.rand() + 2
-            random_scaling_index_y = np.random.rand() + 2
+            # Adding 0.7 so the image never gets smaller that 1x of its size
+            random_scaling_index_x = np.random.rand() + 1
+            random_scaling_index_y = np.random.rand() + 1
             smaller_image = cv2.resize(smaller_image,
                                        None,
                                        fx=random_scaling_index_x,
                                        fy=random_scaling_index_y)
             s_height, s_width, s_channels = smaller_image.shape
-            s_height_3, s_width_3 = math.floor(s_height / 5), math.floor(s_width / 5)
+            s_height_3, s_width_3 = math.floor(s_height / 5), math.floor(s_width / 4)
 
             affine_ref_points_1 = np.float32([[0, 0],
                                               [s_height, 0],
@@ -96,22 +103,29 @@ class ImageGenerator:
             s_alpha = smaller_image[:, :, 3] / 255.0
             l_alpha = 1.0 - s_alpha
 
-            x_offset = np.random.randint(0, (b_width - s_width))
+            x_offset = np.random.randint(0, (b_width - s_width - 10))
             x_max = x_offset + s_width
-            y_offset = np.random.randint(0, (b_height - s_height))
+            y_offset = np.random.randint(0, (b_height - s_height - 10))
             y_max = y_offset + s_height
             for c in range(0, 3):
                 background_copy[y_offset:y_max, x_offset:x_max, c] = (s_alpha * smaller_image[:, :, c] +
                                                                       l_alpha * background_copy[y_offset:y_max,
                                                                                 x_offset:x_max, c])
-        plt.imshow(background_copy)
-        plt.show()
+        # class imagename width height xmin xmax ymin ymax
+            image_class += s_location[0]
+        image_name = '{}.png'.format(self.randomword(6))
+        cv2.imwrite('{0}/{1}'.format(self.images_folder, image_name), background_copy)
+        csv_line = '{0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}'.format(image_class, image_name, b_width, b_height, x_offset, x_max, y_offset, y_max)
+        return csv_line
+        # plt.imshow(background_copy)
+        # plt.show()
         # TODO: RETURN IMAGE LOCATION TO USE *.CSV WITH
 
     def start_generating_images(self, multi_threaded, images_per_background, number_of_images, difficulty):
         if multi_threaded:
             self.do_something()
 
+        csv_lines = list()
         for i in range(number_of_images):
             random_images = []
             while len(random_images) < images_per_background:
@@ -129,9 +143,21 @@ class ImageGenerator:
                                                         os.listdir(self.backgrounds_folder)[np.random.randint(0, len(os.listdir(self.backgrounds_folder)))])
                 if '.DS_Store' not in random_background_location:
                     break
-            self.combine_images(random_images, random_background_location)
-
+            csv_line = self.combine_images(random_images, random_background_location)
+            csv_lines.append(csv_line)
+            csv_name = 'test01.csv'
+            csv_location = os.path.join(self.data_folder, csv_name)
+            with open(csv_location, 'w') as csvfile:
+                filewriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+                filewriter.writerow('class, imagename, imwidth, imheight, xmin, xmax, ymin, ymax'.split(', '))
+                for line in csv_lines:
+                    splitline = line.split(', ')
+                    filewriter.writerow(splitline)
 
 
     def random_float(self, min_num, max_num):
         return np.random.random() * (max_num - min_num) + min_num
+
+    def randomword(self, length):
+        letters = string.ascii_lowercase
+        return ''.join(random.choice(letters) for i in range(length))

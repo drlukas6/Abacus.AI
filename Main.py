@@ -15,4 +15,4 @@ image_generator.print_directory_status()
 #                                background_image_location=os.path.join(image_generator.backgrounds_folder,
 #                                                                       'A4_math_1.png'))
 
-image_generator.start_generating_images(False, 5, 10, 'Easy')
+image_generator.start_generating_images(False, 1, 100, 'Easy')
