@@ -2,13 +2,23 @@ import os
 from PIL import Image, ImageFont, ImageDraw
 import numpy as np
 import cv2
-import matplotlib.pyplot as plt
 import math
 import random
 import string
 import csv
 
+
 class ImageGenerator:
+    """
+    Class that defines a pipeline needed for:
+        - Creating and maintaining a well defined folder structure
+        - Creating examples of symbols needed for Object Detection in various fonts
+        - Performing geometric transformations on symbols before pasting them for more unique images
+        - Pasting symbols on various and random backgrounds
+        - Saving images and maintaining *.csv files for further usage in the pipeline
+            - Skipping *.xml files completely makes the whole process more streamlined
+    """
+
     def __init__(self, backgrounds_folder, fonts_folder, symbols_folder):
         self.current_directory = os.getcwd()
         self.backgrounds_folder = os.path.join(self.current_directory, backgrounds_folder)
@@ -40,6 +50,12 @@ class ImageGenerator:
         print('Symbols directory: {}'.format(self.symbols_folder))
 
     def generate_text_image(self, font, size, text):
+        """
+        :param font: Font to write text in
+        :param size: Size of text
+        :param text: Text to write on a transparent image
+        :return: Created image in Pil.Image format
+        """
         loaded_font = ImageFont.truetype(font, size)
         size = loaded_font.getsize(text)
         background_image = Image.new('RGBA', size, (255, 255, 255, 0))
@@ -48,6 +64,11 @@ class ImageGenerator:
         return background_image
 
     def generate_examples_for_text(self, text, number_of_examples):
+        """
+        :param text: Text to write on a transparent image
+        :param number_of_examples: Number of images to generate
+        :return: /
+        """
         for i in range(0, number_of_examples):
             symbol_directory = os.path.join(self.symbols_folder, text)
             if not os.path.exists(symbol_directory):
@@ -60,11 +81,18 @@ class ImageGenerator:
             generated_image = self.generate_text_image(font=random_font_location,
                                                        size=random_font_size,
                                                        text=text)
-            # image_path = os.path.join(symbol_directory, 'Symbol_{}_{}.png'.format(text, i))
-            # generated_image.save(image_path, format='PNG')
+            image_path = os.path.join(symbol_directory, 'Symbol_{}_{}.png'.format(text, i))
+            generated_image.save(image_path, format='PNG')
 
     def generate_math_expression(self, expression, font_path='Fonts/JustBreathe.otf',
                                  size=100, background_location='Backgrounds/A4_math_2.png'):
+        """
+        :param expression: Math expression (eg. 32+5) to write on a transparent image
+        :param font_path: Path to a font to use for writing text
+        :param size: Size of text
+        :param background_location: Location of a background image to paste text on
+        :return: /
+        """
         print('Entered expression:', expression)
 
         full_font_path = os.path.join(self.current_directory, font_path)
@@ -94,15 +122,24 @@ class ImageGenerator:
             background_copy[y_offset:y_max, x_offset:x_max, c] = (s_alpha * foreground[:, :, c] +
                                                                   l_alpha * background_copy[y_offset:y_max,
                                                                   x_offset:x_max, c])
-        image_name = '{}.png'.format(self.randomword(6))
+        image_name = '{}.png'.format(self.random_word(6))
         cv2.imwrite(os.path.join(self.expressions_folder, image_name), background_copy)
 
     def generate_examples_for_all_symbols(self, number_of_examples):
+        """
+        :param number_of_examples: How many images to generate for each symbol
+        :return: /
+        """
         for symbol in self.symbols:
             print('Processing symbol: ', symbol, ' ...')
             self.generate_examples_for_text(symbol, number_of_examples)
 
     def combine_images(self, smaller_images_locations, background_image_location):
+        """
+        :param smaller_images_locations: Full path locations to smaller images to use as foreground
+        :param background_image_location: Background to paste foreground on
+        :return: Line of *.csv file describing the image and its content
+        """
         print('Smaller images: {0} ; Background: {1}'.format(smaller_images_locations, background_image_location))
 
         background_image = cv2.imread(background_image_location)
@@ -150,12 +187,18 @@ class ImageGenerator:
                                                                                 x_offset:x_max, c])
         # class imagename width height xmin xmax ymin ymax
             image_class += s_location[0]
-        image_name = '{}.png'.format(self.randomword(6))
+        image_name = '{}.png'.format(self.random_word(6))
         cv2.imwrite('{0}/{1}'.format(self.images_folder, image_name), background_copy)
         csv_line = '{0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}'.format(image_name, image_class, b_width, b_height, x_offset, x_max, y_offset, y_max)
         return csv_line
 
     def start_generating_images(self, images_per_background, number_of_images, difficulty):
+        """
+        :param images_per_background: How many symbols to paste on a background
+        :param number_of_images: Number of images to generate
+        :param difficulty: Either Easy or Challenging
+        :return: Creates a csv file
+        """
         csv_lines = list()
         for i in range(number_of_images):
             random_images = []
@@ -170,7 +213,6 @@ class ImageGenerator:
                 if '.DS_S' in random_image_path:
                     continue
                 random_images.append(random_image_path)
-            random_background_location = ''
             while True:
                 random_background_location = os.path.join(self.backgrounds_folder,
                                                         os.listdir(self.backgrounds_folder)[np.random.randint(0, len(os.listdir(self.backgrounds_folder)))])
@@ -201,10 +243,11 @@ class ImageGenerator:
                     splitline = line.split(', ')
                     filewriter.writerow(splitline)
 
-
-    def random_float(self, min_num, max_num):
+    @staticmethod
+    def random_float(min_num, max_num):
         return np.random.random() * (max_num - min_num) + min_num
 
-    def randomword(self, length):
+    @staticmethod
+    def random_word(length):
         letters = string.ascii_lowercase
         return ''.join(random.choice(letters) for i in range(length))
