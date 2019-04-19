@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eefb00d6-cdd4-41f5-84f2-9df5546340de" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ImageGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/ImageGenerator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
     </list>
@@ -32,23 +31,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ImageGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-240">
-              <caret line="163" column="48" lean-forward="true" selection-start-line="163" selection-start-column="48" selection-end-line="163" selection-end-column="48" />
+            <state relative-caret-position="614">
+              <caret line="205" column="38" lean-forward="true" selection-start-line="205" selection-start-column="38" selection-end-line="205" selection-end-column="38" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -69,6 +65,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>/</find>
+      <find>start_generating_images</find>
+      <find>generate_examples_for_text</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -106,6 +104,16 @@
               <item name="Završni Rad" type="b2602c69:ProjectViewProjectNode" />
               <item name="Završni Rad" type="462c0819:PsiDirectoryNode" />
               <item name="Backgrounds" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Završni Rad" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Završni Rad" type="462c0819:PsiDirectoryNode" />
+              <item name="Images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Završni Rad" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Završni Rad" type="462c0819:PsiDirectoryNode" />
+              <item name="Symbols" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -249,7 +257,7 @@
       <workItem from="1554208544971" duration="645000" />
       <workItem from="1554215422464" duration="296000" />
       <workItem from="1555658641794" duration="2102000" />
-      <workItem from="1555686503463" duration="1201000" />
+      <workItem from="1555686503463" duration="2348000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1552838105493</created>
@@ -307,11 +315,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555687296985</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Small code cleanup">
+      <created>1555687715437</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1555687715437</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35660000" />
+    <option name="totallyTimeSpent" value="36807000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -323,7 +338,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.2746988" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2746988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -332,7 +347,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32891566" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32771084" />
+      <window_info anchor="bottom" id="Python Console" order="12" visible="true" weight="0.32771084" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -377,7 +392,8 @@
     <MESSAGE value="Enhanced affine transformation" />
     <MESSAGE value="Better image generation" />
     <MESSAGE value="Creating images with expressions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating images with expressions" />
+    <MESSAGE value="Small code cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small code cleanup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -480,23 +496,20 @@
     <entry file="file://$PROJECT_DIR$/test.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main.py">
+    <entry file="file://$PROJECT_DIR$/ImageGenerator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="614">
+          <caret line="205" column="38" lean-forward="true" selection-start-line="205" selection-start-column="38" selection-end-line="205" selection-end-column="38" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ImageGenerator.py">
+    <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-240">
-          <caret line="163" column="48" lean-forward="true" selection-start-line="163" selection-start-column="48" selection-end-line="163" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>

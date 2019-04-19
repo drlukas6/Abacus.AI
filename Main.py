@@ -6,13 +6,16 @@ image_generator = ImageGenerator(backgrounds_folder='Backgrounds',
 
 image_generator.print_directory_status()
 
+# Step 1
 # image_generator.generate_examples_for_all_symbols(len(os.listdir(image_generator.fonts_folder)))
 
 # s_locations = [os.path.join(image_generator.symbols_folder, '//Symbol_/_11.png')]
 #
+# Step 2
 # image_generator.combine_images(smaller_images_locations=s_locations,
 #                                background_image_location=os.path.join(image_generator.backgrounds_folder,
 #                                                                       'A4_math_1.png'))
 
+# Step 3 (For testing after a training session)
 image_generator.start_generating_images(10, 3, 'Easy')
 image_generator.generate_math_expression('2+2')
