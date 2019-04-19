@@ -65,7 +65,11 @@ class ImageGenerator:
 
     def generate_math_expression(self, expression, font_path='Fonts/JustBreathe.otf',
                                  size=100, background_location='Backgrounds/A4_math_2.png'):
+        print('Entered expression:', expression)
+
         full_font_path = os.path.join(self.current_directory, font_path)
+        print('Full font path:', full_font_path)
+
         generated_expression = self.generate_text_image(full_font_path, size, expression)
         image_path = os.path.join(self.current_directory, 'test.png')
         generated_expression.save(image_path, format='PNG')
@@ -81,9 +85,9 @@ class ImageGenerator:
         s_alpha = foreground[:, :, 3] / 255.0
         l_alpha = 1.0 - s_alpha
 
-        x_offset = int((b_width / 2) - (s_width / 2)) # Centering the expression horizontally
+        x_offset = int((b_width / 2) - (s_width / 2))  # Centering the expression horizontally
         x_max = int(x_offset + s_width)
-        y_offset = int((b_height / 2) - (s_height / 2))# Centering the expression vertically
+        y_offset = int((b_height / 2) - (s_height / 2))  # Centering the expression vertically
         y_max = int(y_offset + s_height)
 
         for c in range(0, 3):
@@ -151,10 +155,7 @@ class ImageGenerator:
         csv_line = '{0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}'.format(image_name, image_class, b_width, b_height, x_offset, x_max, y_offset, y_max)
         return csv_line
 
-    def start_generating_images(self, multi_threaded, images_per_background, number_of_images, difficulty):
-        if multi_threaded:
-            self.do_something()
-
+    def start_generating_images(self, images_per_background, number_of_images, difficulty):
         csv_lines = list()
         for i in range(number_of_images):
             random_images = []

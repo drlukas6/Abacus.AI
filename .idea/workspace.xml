@@ -3,110 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="eefb00d6-cdd4-41f5-84f2-9df5546340de" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/test01.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ImageGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/ImageGenerator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/ainosx.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/akudzm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/akywih.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/aoxstj.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/apkjuw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/argmbz.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/ayfvmj.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/bdpzwu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/bdwqif.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/bggbyo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/bodjfb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/brayde.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/brqiof.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/cndsus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/coogsf.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/dopoeo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/dtnlca.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/dybopy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/efkfvw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/emdnph.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/etfcuj.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/eyctgm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/fcmqgr.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/fofqop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/fqtjmo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/fzopxw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/gdnfnp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/ghppxc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/gjlgiw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/grqtzh.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/gzrzrn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/hggvob.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/higuue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/hryvpi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/ijcjcl.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/imkxzv.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/iqtkco.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/iqwejg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/jbszzj.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/jehaus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/jknszq.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/jmntkf.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/jxaqdp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/jxpcla.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/kbrukl.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/kdkiep.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/lofhex.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/lvmvvb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/lwonig.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/lwvvnp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/mlvfrf.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/mojwld.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/nqrxsa.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/ntpzid.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/ohraiq.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/omjkbf.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/pippxj.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/poqmgw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/pvqing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/pxamze.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/qddzga.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/qdvayv.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/qfmabq.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/qvtcnp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/rbuiwe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/rlffyo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/rtdumw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/splegu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/tdtsth.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/tkcdsb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/tmildh.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/tociwa.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/ubsqsy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/uhvaef.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/urxayr.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/utxwvk.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/vhztsp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/vozbns.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/vtyrkg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/wfkffd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/wfyocu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/whnkxa.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/wkkrov.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/wmzjfa.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/wucpef.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/wuvjcl.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/xdsxnp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/xehkqp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/xkwqwh.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/xppesg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/xstphl.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/xyqxso.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/ybqaak.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/ycslsd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/yjvzmx.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/ykekic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/ytxfyi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/zabnaq.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/zgcxxr.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/ziwbds.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -137,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+            <state relative-caret-position="90">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -149,8 +47,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ImageGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="83" column="88" lean-forward="true" selection-start-line="83" selection-start-column="88" selection-end-line="83" selection-end-column="88" />
+            <state relative-caret-position="-240">
+              <caret line="163" column="48" lean-forward="true" selection-start-line="163" selection-start-column="48" selection-end-line="163" selection-end-column="48" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -181,8 +79,8 @@
       <list>
         <option value="$PROJECT_DIR$/ImageGenerator.ipynb" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/Main.py" />
         <option value="$PROJECT_DIR$/ImageGenerator.py" />
+        <option value="$PROJECT_DIR$/Main.py" />
       </list>
     </option>
   </component>
@@ -281,7 +179,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Main" type="PythonConfigurationType" factoryName="Python">
       <module name="Završni Rad" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -323,12 +221,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.ImageGenerator" />
       <item itemvalue="Python.Main" />
+      <item itemvalue="Python.ImageGenerator" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Main" />
         <item itemvalue="Python.ImageGenerator" />
       </list>
     </recent_temporary>
@@ -352,7 +249,7 @@
       <workItem from="1554208544971" duration="645000" />
       <workItem from="1554215422464" duration="296000" />
       <workItem from="1555658641794" duration="2102000" />
-      <workItem from="1555686503463" duration="542000" />
+      <workItem from="1555686503463" duration="1201000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1552838105493</created>
@@ -403,23 +300,30 @@
       <option name="project" value="LOCAL" />
       <updated>1553789957068</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Creating images with expressions">
+      <created>1555687296985</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1555687296985</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35001000" />
+    <option name="totallyTimeSpent" value="35660000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19957082" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19957082" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.12289157" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.2746988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -428,7 +332,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32891566" />
-      <window_info anchor="bottom" id="Python Console" order="12" visible="true" weight="0.32771084" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32771084" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -472,17 +376,11 @@
     <MESSAGE value="Geometric transformations work" />
     <MESSAGE value="Enhanced affine transformation" />
     <MESSAGE value="Better image generation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Better image generation" />
+    <MESSAGE value="Creating images with expressions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating images with expressions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/ImageGenerator.py</url>
-          <line>42</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -493,7 +391,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Zavrni_Rad$Main.coverage" NAME="Main Coverage Results" MODIFIED="1555687073081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Zavrni_Rad$Main.coverage" NAME="Main Coverage Results" MODIFIED="1555687378315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ImageGenerator.ipynb" />
@@ -584,8 +482,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -594,8 +492,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ImageGenerator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="83" column="88" lean-forward="true" selection-start-line="83" selection-start-column="88" selection-end-line="83" selection-end-column="88" />
+        <state relative-caret-position="-240">
+          <caret line="163" column="48" lean-forward="true" selection-start-line="163" selection-start-column="48" selection-end-line="163" selection-end-column="48" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
