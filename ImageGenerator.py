@@ -26,9 +26,12 @@ class ImageGenerator:
         self.images_folder = os.path.join(self.current_directory, 'Images')
         if not os.path.exists(self.images_folder):
             os.mkdir(self.images_folder)
-        self.data_folder = os.path.join(self.current_directory, 'Data')
+        self.data_folder = os.path.join(self.current_directory, 'TrainData')
         if not os.path.exists(self.data_folder):
             os.mkdir(self.data_folder)
+        self.expressions_folder = os.path.join(self.current_directory, 'Expressions')
+        if not os.path.exists(self.expressions_folder):
+            os.mkdir(self.expressions_folder)
 
     def print_directory_status(self):
         print('Current directory: {}'.format(self.current_directory))
@@ -57,8 +60,38 @@ class ImageGenerator:
             generated_image = self.generate_text_image(font=random_font_location,
                                                        size=random_font_size,
                                                        text=text)
-            image_path = os.path.join(symbol_directory, 'Symbol_{}_{}.png'.format(text, i))
-            generated_image.save(image_path, format='PNG')
+            # image_path = os.path.join(symbol_directory, 'Symbol_{}_{}.png'.format(text, i))
+            # generated_image.save(image_path, format='PNG')
+
+    def generate_math_expression(self, expression, font_path='Fonts/JustBreathe.otf',
+                                 size=100, background_location='Backgrounds/A4_math_2.png'):
+        full_font_path = os.path.join(self.current_directory, font_path)
+        generated_expression = self.generate_text_image(full_font_path, size, expression)
+        image_path = os.path.join(self.current_directory, 'test.png')
+        generated_expression.save(image_path, format='PNG')
+
+        background_image_location = os.path.join(self.current_directory, background_location)
+        background_image = cv2.imread(background_image_location)
+
+        b_height, b_width, b_channels = background_image.shape
+        background_copy = background_image.copy()
+        foreground = cv2.imread(image_path, -1)
+        s_height, s_width, s_channels = foreground.shape
+
+        s_alpha = foreground[:, :, 3] / 255.0
+        l_alpha = 1.0 - s_alpha
+
+        x_offset = int((b_width / 2) - (s_width / 2)) # Centering the expression horizontally
+        x_max = int(x_offset + s_width)
+        y_offset = int((b_height / 2) - (s_height / 2))# Centering the expression vertically
+        y_max = int(y_offset + s_height)
+
+        for c in range(0, 3):
+            background_copy[y_offset:y_max, x_offset:x_max, c] = (s_alpha * foreground[:, :, c] +
+                                                                  l_alpha * background_copy[y_offset:y_max,
+                                                                  x_offset:x_max, c])
+        image_name = '{}.png'.format(self.randomword(6))
+        cv2.imwrite(os.path.join(self.expressions_folder, image_name), background_copy)
 
     def generate_examples_for_all_symbols(self, number_of_examples):
         for symbol in self.symbols:
@@ -115,11 +148,8 @@ class ImageGenerator:
             image_class += s_location[0]
         image_name = '{}.png'.format(self.randomword(6))
         cv2.imwrite('{0}/{1}'.format(self.images_folder, image_name), background_copy)
-        csv_line = '{0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}'.format(image_class, image_name, b_width, b_height, x_offset, x_max, y_offset, y_max)
+        csv_line = '{0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}'.format(image_name, image_class, b_width, b_height, x_offset, x_max, y_offset, y_max)
         return csv_line
-        # plt.imshow(background_copy)
-        # plt.show()
-        # TODO: RETURN IMAGE LOCATION TO USE *.CSV WITH
 
     def start_generating_images(self, multi_threaded, images_per_background, number_of_images, difficulty):
         if multi_threaded:
@@ -136,6 +166,8 @@ class ImageGenerator:
                 found_images = os.listdir(random_letter_folder)
                 random_image_name = found_images[np.random.randint(0, len(found_images))]
                 random_image_path = os.path.join(random_letter, difficulty, random_image_name)
+                if '.DS_S' in random_image_path:
+                    continue
                 random_images.append(random_image_path)
             random_background_location = ''
             while True:
@@ -145,12 +177,26 @@ class ImageGenerator:
                     break
             csv_line = self.combine_images(random_images, random_background_location)
             csv_lines.append(csv_line)
-            csv_name = 'test01.csv'
-            csv_location = os.path.join(self.data_folder, csv_name)
-            with open(csv_location, 'w') as csvfile:
+            csv_train_name = 'train01.csv'
+            csv_test_name = 'test01.csv'
+            csv_train_location = os.path.join(self.data_folder, csv_train_name)
+            csv_test_location = os.path.join(self.data_folder, csv_test_name)
+            train_lines = csv_lines[0:int(len(csv_lines) * 0.8)]
+            test_lines = csv_lines[int(len(csv_lines) * 0.8):]
+
+            #train
+            with open(csv_train_location, 'w') as csvfile:
                 filewriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-                filewriter.writerow('class, imagename, imwidth, imheight, xmin, xmax, ymin, ymax'.split(', '))
-                for line in csv_lines:
+                filewriter.writerow('filename, class, imwidth, imheight, xmin, xmax, ymin, ymax'.split(', '))
+                for line in train_lines:
+                    splitline = line.split(', ')
+                    filewriter.writerow(splitline)
+
+            #test
+            with open(csv_test_location, 'w') as csvfile:
+                filewriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+                filewriter.writerow('filename, class, imwidth, imheight, xmin, xmax, ymin, ymax'.split(', '))
+                for line in test_lines:
                     splitline = line.split(', ')
                     filewriter.writerow(splitline)
 

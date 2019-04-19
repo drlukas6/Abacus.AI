@@ -15,4 +15,6 @@ image_generator.print_directory_status()
 #                                background_image_location=os.path.join(image_generator.backgrounds_folder,
 #                                                                       'A4_math_1.png'))
 
-image_generator.start_generating_images(False, 1, 100, 'Easy')
+# image_generator.start_generating_images(False, 10, 3, 'Easy')
+# image_generator.generate_examples_for_text("3 + 2", 1)
+image_generator.generate_math_expression('3x+2=8')
