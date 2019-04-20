@@ -1,3 +1,5 @@
+<img src="https://i.ibb.co/4ZH33bY/logo.png" alt="AbacusLogo" height="350" width="350"/>
+
 # Abacus.AI
 
 ### Description: Detect and classify basic mathematical elements on an image and evaluate expressions based on the same
