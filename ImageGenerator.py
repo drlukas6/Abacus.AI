@@ -16,7 +16,7 @@ class ImageGenerator:
         - Performing geometric transformations on symbols before pasting them for more unique images
         - Pasting symbols on various and random backgrounds
         - Saving images and maintaining *.csv files for further usage in the pipeline
-            - Skipping *.xml files completely makes the whole process more streamlined
+        - Skipping *.xml files completely makes the whole process more streamlined
     """
 
     def __init__(self, backgrounds_folder, fonts_folder, symbols_folder):
@@ -215,7 +215,7 @@ class ImageGenerator:
                 random_images.append(random_image_path)
             while True:
                 random_background_location = os.path.join(self.backgrounds_folder,
-                                                        os.listdir(self.backgrounds_folder)[np.random.randint(0, len(os.listdir(self.backgrounds_folder)))])
+                                                          os.listdir(self.backgrounds_folder)[np.random.randint(0, len(os.listdir(self.backgrounds_folder)))])
                 if '.DS_Store' not in random_background_location:
                     break
             csv_line = self.combine_images(random_images, random_background_location)
@@ -227,7 +227,7 @@ class ImageGenerator:
             train_lines = csv_lines[0:int(len(csv_lines) * 0.8)]
             test_lines = csv_lines[int(len(csv_lines) * 0.8):]
 
-            #train
+            # train
             with open(csv_train_location, 'w') as csvfile:
                 filewriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
                 filewriter.writerow('filename, class, imwidth, imheight, xmin, xmax, ymin, ymax'.split(', '))
@@ -235,7 +235,7 @@ class ImageGenerator:
                     splitline = line.split(', ')
                     filewriter.writerow(splitline)
 
-            #test
+            # test
             with open(csv_test_location, 'w') as csvfile:
                 filewriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
                 filewriter.writerow('filename, class, imwidth, imheight, xmin, xmax, ymin, ymax'.split(', '))
