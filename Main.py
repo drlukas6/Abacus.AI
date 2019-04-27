@@ -1,4 +1,6 @@
 from ImageGenerator import *
+import time
+
 
 image_generator = ImageGenerator(backgrounds_folder='Backgrounds',
                                  fonts_folder='Fonts',
@@ -16,6 +18,16 @@ image_generator.print_directory_status()
 #                                background_image_location=os.path.join(image_generator.backgrounds_folder,
 #                                                                       'A4_math_1.png'))
 
+times = list()
 # Step 3 (For testing after a training session)
-image_generator.start_generating_images(10, 3, 'Easy')
-image_generator.generate_math_expression('2+2')
+for i in range(10):
+    start_time = time.time()
+    image_generator.start_generating_images(1, 10, 'Easy')
+# image_generator.generate_math_expression('2+2')
+    end_time = time.time()
+    times.append((end_time - start_time))
+time_sum = 0
+for item in times:
+    time_sum += item
+
+print('Average time for execution:', time_sum / 10)
