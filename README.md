@@ -24,3 +24,6 @@ Contents:
     - Code will be made more efficient after presenting the final thesis
   - `generate_tfrecords.py` for creating *.record files for further `Tensorflow API` usage
   
+  Testing:
+   - File called `ImagePredictor.py` contains everything neccessary to run the interference graph on an image
+     -Output image is saved as `output.png` and the result is printed out in the console

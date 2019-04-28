@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eefb00d6-cdd4-41f5-84f2-9df5546340de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ImagePredictor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Završni Rad.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Završni Rad.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/GenerateImages.py" afterDir="false" />
-    </list>
+    <list default="true" id="eefb00d6-cdd4-41f5-84f2-9df5546340de" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,8 +49,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ImagePredictor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="150" column="13" selection-start-line="150" selection-start-column="13" selection-end-line="150" selection-end-column="13" />
+            <state relative-caret-position="270">
+              <caret line="18" column="34" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="34" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -114,11 +109,6 @@
             <path>
               <item name="Završni Rad" type="b2602c69:ProjectViewProjectNode" />
               <item name="Završni Rad" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Završni Rad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Završni Rad" type="462c0819:PsiDirectoryNode" />
-              <item name="Images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Završni Rad" type="b2602c69:ProjectViewProjectNode" />
@@ -318,7 +308,7 @@
       <workItem from="1555686503463" duration="3525000" />
       <workItem from="1555755995229" duration="1228000" />
       <workItem from="1556209449126" duration="1175000" />
-      <workItem from="1556445043911" duration="2426000" />
+      <workItem from="1556445043911" duration="2649000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1552838105493</created>
@@ -411,16 +401,24 @@
       <option name="project" value="LOCAL" />
       <updated>1555770820999</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Running outside jupyter">
+      <created>1556447705293</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1556447705293</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42813000" />
+    <option name="totallyTimeSpent" value="43036000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2081545" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2081545" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -435,11 +433,11 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3277202" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.30240965" />
+      <window_info anchor="bottom" id="Python Console" order="12" visible="true" weight="0.30240965" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.35121602" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.35121602" />
       <window_info anchor="right" id="Database" order="4" weight="0.3297568" />
       <window_info anchor="right" x="0" y="0" width="310" height="700" id="Documentation" order="5" side_tool="true" weight="0.2074392" />
     </layout>
@@ -488,7 +486,8 @@
     <MESSAGE value="More documentation" />
     <MESSAGE value="README" />
     <MESSAGE value="Image?" />
-    <option name="LAST_COMMIT_MESSAGE" value="Image?" />
+    <MESSAGE value="Running outside jupyter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Running outside jupyter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -506,7 +505,6 @@
     <SUITE FILE_PATH="coverage/Zavrni_Rad$testing.coverage" NAME="testing Coverage Results" MODIFIED="1556209831234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Symbols/5/5_2.png" />
     <entry file="file://$PROJECT_DIR$/Symbols/8/8_1.png" />
     <entry file="file://$PROJECT_DIR$/Symbols/7/7_0.png" />
     <entry file="file://$PROJECT_DIR$/Symbols/7/7_4.png" />
@@ -612,16 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ImageGenerator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3525">
-          <caret line="235" column="50" selection-start-line="235" selection-start-column="50" selection-end-line="235" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Images/cjnlau.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -631,10 +619,23 @@
     <entry file="file://$PROJECT_DIR$/Images/bdphes.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/output.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ImageGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="220" column="43" selection-start-line="220" selection-start-column="43" selection-end-line="220" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ImagePredictor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="150" column="13" selection-start-line="150" selection-start-column="13" selection-end-line="150" selection-end-column="13" />
+        <state relative-caret-position="270">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="34" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
