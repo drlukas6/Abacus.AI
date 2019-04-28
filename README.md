@@ -26,4 +26,4 @@ Contents:
   
   Testing:
    - File called `ImagePredictor.py` contains everything neccessary to run the interference graph on an image
-     -Output image is saved as `output.png` and the result is printed out in the console
+     - Output image is saved as `output.png` and the result is printed out in the console
