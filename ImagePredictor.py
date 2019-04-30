@@ -77,8 +77,8 @@ symbol_mappings = {
                   14: ':'}
 
 current_dir = os.getcwd()
-model_name = 'second_run_ssd'
-frozen_graph_path = 'models/research/object_detection/second_run_ssd/frozen_inference_graph.pb'
+model_name = 'final_run_ssd'
+frozen_graph_path = 'models/research/object_detection/final_run_ssd/frozen_inference_graph.pb'
 labels_path = 'models/research/object_detection/training/label_map.pbtxt'
 
 detection_graph = tf.Graph()
@@ -93,7 +93,11 @@ category_index = label_map_util.create_category_index_from_labelmap(labels_path,
 
 images_dir = os.path.join(current_dir, 'Images')
 images_to_test = [
-                    os.path.join(images_dir, 'fiveplusone.jpg')
+                    # os.path.join(images_dir, 'fiveplusone.jpg'),
+                    # os.path.join(images_dir, 'threeplusseven.jpg'),
+                    # os.path.join(images_dir, 'handwriten_one.jpg'),
+                    os.path.join(images_dir, 'hand_two.jpg'),
+                    os.path.join(images_dir, 'hand_three.jpg'),
                 ]
 
 for path in images_to_test:
@@ -101,6 +105,7 @@ for path in images_to_test:
 
 output_size = (24, 16)
 
+image_count = 1
 for image_path in images_to_test:
     image = Image.open(image_path)
     # the array based representation of the image will be used later in order to prepare the
@@ -149,4 +154,5 @@ for image_path in images_to_test:
         line_thickness=4)
     plt.figure(figsize=output_size)
     plt.imshow(image_np)
-    plt.savefig('output.png')
+    plt.savefig('output_{}.png'.format(image_count))
+    image_count += 1

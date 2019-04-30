@@ -123,6 +123,7 @@ class ImageGenerator:
                                                                   l_alpha * background_copy[y_offset:y_max,
                                                                   x_offset:x_max, c])
         image_name = '{}.png'.format(self.random_word(6))
+        print('saving image:', image_name)
         cv2.imwrite(os.path.join(self.expressions_folder, image_name), background_copy)
 
     def generate_examples_for_all_symbols(self, number_of_examples):

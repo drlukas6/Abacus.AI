@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eefb00d6-cdd4-41f5-84f2-9df5546340de" name="Default Changelist" comment="" />
+    <list default="true" id="eefb00d6-cdd4-41f5-84f2-9df5546340de" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/GenerateImages.py" beforeDir="false" afterPath="$PROJECT_DIR$/GenerateImages.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ImageGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/ImageGenerator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ImagePredictor.py" beforeDir="false" afterPath="$PROJECT_DIR$/ImagePredictor.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +35,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
+            <state relative-caret-position="1560">
               <caret line="104" column="69" selection-start-line="104" selection-start-column="69" selection-end-line="104" selection-end-column="69" />
             </state>
           </provider>
@@ -40,8 +44,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GenerateImages.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="285">
+              <caret line="20" column="31" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -49,8 +53,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ImagePredictor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="34" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="34" />
+            <state relative-caret-position="82">
+              <caret line="97" column="69" lean-forward="true" selection-start-line="97" selection-start-column="69" selection-end-line="97" selection-end-column="69" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -73,7 +77,13 @@
       <find>/</find>
       <find>start_generating_images</find>
       <find>generate_examples_for_text</find>
+      <find>second_run</find>
+      <find>output.p</find>
+      <find>five</find>
     </findStrings>
+    <replaceStrings>
+      <replace>final_run</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -85,9 +95,10 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Main.py" />
         <option value="$PROJECT_DIR$/README.h" />
-        <option value="$PROJECT_DIR$/ImageGenerator.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/testing.py" />
+        <option value="$PROJECT_DIR$/GenerateImages.py" />
+        <option value="$PROJECT_DIR$/ImageGenerator.py" />
         <option value="$PROJECT_DIR$/ImagePredictor.py" />
       </list>
     </option>
@@ -169,9 +180,6 @@
       <module name="Završni Rad" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="/usr/local/bin/python3.7" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
@@ -191,9 +199,6 @@
       <module name="Završni Rad" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -281,8 +286,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.ImagePredictor" />
-        <item itemvalue="Python.testing" />
         <item itemvalue="Python.ImageGenerator" />
+        <item itemvalue="Python.testing" />
       </list>
     </recent_temporary>
   </component>
@@ -309,6 +314,7 @@
       <workItem from="1555755995229" duration="1228000" />
       <workItem from="1556209449126" duration="1175000" />
       <workItem from="1556445043911" duration="2649000" />
+      <workItem from="1556622022413" duration="1097000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1552838105493</created>
@@ -412,13 +418,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43036000" />
+    <option name="totallyTimeSpent" value="44133000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2081545" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21101573" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -433,7 +439,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3277202" />
-      <window_info anchor="bottom" id="Python Console" order="12" visible="true" weight="0.30240965" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.2807229" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -505,7 +511,6 @@
     <SUITE FILE_PATH="coverage/Zavrni_Rad$testing.coverage" NAME="testing Coverage Results" MODIFIED="1556209831234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Symbols/8/8_1.png" />
     <entry file="file://$PROJECT_DIR$/Symbols/7/7_0.png" />
     <entry file="file://$PROJECT_DIR$/Symbols/7/7_4.png" />
     <entry file="file://$PROJECT_DIR$/Symbols/7/7_3.png" />
@@ -540,9 +545,6 @@
     <entry file="file://$PROJECT_DIR$/Symbols/5/Symbol_5_57.png" />
     <entry file="file://$PROJECT_DIR$/Symbols/5/Symbol_5_69.png" />
     <entry file="file://$PROJECT_DIR$/Backgrounds/background_1.jpg" />
-    <entry file="file://$PROJECT_DIR$/t.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backgrounds/A4_math_3.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -596,20 +598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="104" column="69" selection-start-line="104" selection-start-column="69" selection-end-line="104" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GenerateImages.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Images/cjnlau.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -619,23 +607,43 @@
     <entry file="file://$PROJECT_DIR$/Images/bdphes.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/output.png">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/testing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1560">
+          <caret line="104" column="69" selection-start-line="104" selection-start-column="69" selection-end-line="104" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GenerateImages.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="40" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ImageGenerator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="220" column="43" selection-start-line="220" selection-start-column="43" selection-end-line="220" selection-end-column="43" />
+        <state relative-caret-position="306">
+          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/output_final.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/t.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/ImagePredictor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="34" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="34" />
+        <state relative-caret-position="82">
+          <caret line="97" column="69" lean-forward="true" selection-start-line="97" selection-start-column="69" selection-end-line="97" selection-end-column="69" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
