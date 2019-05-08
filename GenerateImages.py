@@ -18,7 +18,9 @@ image_generator.print_directory_status()
 #                                background_image_location=os.path.join(image_generator.backgrounds_folder,
 #                                                                       'A4_math_1.png'))
 
-image_generator.generate_math_expression("3 + 7")
+# image_generator.generate_math_expression("3 + 7")
+
+image_generator.start_generating_images(images_per_background=1, number_of_images=10, difficulty='Easy')
 
 # times = list()
 # Step 3 (For testing after a training session)
